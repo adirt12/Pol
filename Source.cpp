@@ -135,6 +135,9 @@ void testRational() {
 	d[0] = 1;
 	Polynomial p3(d, 20);
 	Rational r4(p3, p3);
+
+	cout <<"TESTTTT:"<< r4 + r2<< endl;
+
 	r4 = (r2 + r4) * r2;
 	cout << "test11 : r4 = " << endl << r4 << endl;
 	cout << "test12 :maxDegree = " << Polynomial::getMaxDegree() << endl;
@@ -145,18 +148,7 @@ int main()
 {
 	testPolynomial();
 	testRational();
-	//double c[] = { 0,2,2,3,4,5 };
-	//double d[] = { 1.2,2.5,5.5,3.7,4.2,5 };
-	//Polynomial p1(c, 5);
-	//Polynomial p2(d, 5);
-	//Rational r4(p1, p2);
-	///*cout <<"r4 : "<< r4 << endl;*/
-	//Rational r5(p2, p1);
-	////cout << "r5 : " << r5 << endl;
-	////cout << r4 + r5;//git test
-
-	//cout << "p1: " << p1 << endl << "p2: " << p2 << endl;
-	//cout << p1 * p2 << endl << endl << p1 + p2;
+	
 }
 
 

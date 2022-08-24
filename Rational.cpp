@@ -122,7 +122,15 @@ Rational Rational:: operator *(const Rational& r1)
 
 ostream& operator <<(ostream& out, const Rational&r1)
 {
-	out <<"nom"<< r1.nom << endl << "------------------" << endl <<"denom" << r1.denom << endl;
+	if (r1.denom.getDegree(false) == 1)
+	{
+		out << "nominator=" << r1.nom << endl << "------------------"
+			<< endl << "denominator=" << 1 <<endl;
+	}
+	else{
+		out <<"nominator="<< r1.nom << endl << "------------------" 
+			<< endl <<"denominator=" << r1.denom <<endl;
+	}
 	return out;
 }
 
