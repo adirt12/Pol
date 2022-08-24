@@ -162,12 +162,12 @@ Polynomial Polynomial::operator *(const Polynomial& p1) {
 		big = p1.degree;
 		small = this->getDegree(true);
 	}
-	result.setDegree(big);
+	result.setDegree(big*2);
 	for (i = 0; i <= small ; i++)
 	{
 		result.setCoeff(i*2, this->getCoeff(i) * p1.getCoeff(i));
 	}
-	for (i = small ; i < big; i++)
+	for (i = small ; i <= big; i++)
 	{
 		if (flag == 1) {
 			result.setCoeff(i, this->getCoeff(i));

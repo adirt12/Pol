@@ -26,6 +26,7 @@ public:
 	Rational operator *(const Rational&);
 	bool operator==(const Rational&);
 	friend ostream& operator <<(ostream&, const Rational&);
+	void operator =(const Rational& r1);
 
 
 };

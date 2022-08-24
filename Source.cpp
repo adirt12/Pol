@@ -120,7 +120,7 @@ void testRational() {
 	cout << "test9" << endl;
 	cout << "Numerator is " << r2.getNom();
 	cout << "Denominator is " << r2.getDenom();
-	Rational r3 = r2 * r2 + r2;
+	Rational r3 = r2 * r2 +r2;
 	cout << "test10" << endl;
 	double v[8];
 	v[0] = getCoefficient(r3.getNom(), 3);
@@ -143,17 +143,20 @@ void testRational() {
 
 int main()
 {
-	//testPolynomial();
-	//testRational();
-	double c[] = { 0,2,2,3,4,5 };
-	double d[] = { 1.2,2.5,5.5,3.7,4.2,5 };
-	Polynomial p1(c, 5);
-	Polynomial p2(d, 5);
-	Rational r4(p1, p2);
-	cout <<"r4 : "<< r4 << endl;
-	Rational r5(p2, p1);
-	cout << "r5 : " << r5 << endl;
-	cout << r4 + r5;//git test
+	testPolynomial();
+	testRational();
+	//double c[] = { 0,2,2,3,4,5 };
+	//double d[] = { 1.2,2.5,5.5,3.7,4.2,5 };
+	//Polynomial p1(c, 5);
+	//Polynomial p2(d, 5);
+	//Rational r4(p1, p2);
+	///*cout <<"r4 : "<< r4 << endl;*/
+	//Rational r5(p2, p1);
+	////cout << "r5 : " << r5 << endl;
+	////cout << r4 + r5;//git test
+
+	//cout << "p1: " << p1 << endl << "p2: " << p2 << endl;
+	//cout << p1 * p2 << endl << endl << p1 + p2;
 }
 
 

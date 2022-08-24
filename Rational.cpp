@@ -62,7 +62,23 @@ bool Rational::operator==(const Rational& r1)
 
 Rational Rational:: operator +(const Rational&r1)
 {
-	Rational temp(r1);
+	Rational temp;
+	if (this->denom.getDegree(true) > r1.denom.getDegree(true))
+	{
+		temp.denom.setDegree(this->denom.getDegree(true)*2);
+	}
+	else {
+		temp.denom.setDegree(r1.denom.getDegree(true)*2);
+	}
+
+	if (this->nom.getDegree(true) > r1.nom.getDegree(true))
+	{
+		temp.nom.setDegree(this->nom.getDegree(true) );
+	}
+	else {
+		temp.nom.setDegree(r1.nom.getDegree(true) );
+	}
+
 	if (this->denom == r1.denom)
 	{
 		for(int i=0;i<r1.denom.getDegree(true);i++)
@@ -108,4 +124,22 @@ ostream& operator <<(ostream& out, const Rational&r1)
 {
 	out <<"nom"<< r1.nom << endl << "------------------" << endl <<"denom" << r1.denom << endl;
 	return out;
+}
+
+void Rational::operator =(const Rational& r1)
+{
+	//Rational temp(r1);
+	this->denom.setDegree(r1.denom.getDegree(true)*2);
+	this->nom.setDegree(r1.nom.getDegree(true) * 2);
+
+	for (int i = 0; i < r1.denom.getDegree(true) * 2; i++)
+	{
+		this->denom.setCoeff(i, r1.denom.getCoeff(i));
+	}
+	for (int i = 0; i < r1.nom.getDegree(true) * 2; i++)
+	{
+		this->nom.setCoeff(i, r1.nom.getCoeff(i));
+	}
+
+	//return temp;
 }
