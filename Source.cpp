@@ -146,8 +146,24 @@ void testRational() {
 
 int main()
 {
-	testPolynomial();
-	testRational();
+	//testPolynomial();
+	//testRational();
+
+	double d[] = { 2 , 1 };
+	Polynomial p1(d,1);
+	double c[] = { 1 , 2 };	
+	Polynomial p2(c, 1);
+	//c[0] = 1.2;
+	//Polynomial p2(d, 3);
+	Rational r2(p1, p2);//// 2+x : 1+2x 
+
+	Rational r1(p2, p1);//// 1+2x : 2+x
+
+	//cout << r1 << endl;
+
+	r1 = r2+r1;
+	cout << r1 << endl;
+	cout << r2+r2 << endl;
 	
 }
 

@@ -73,10 +73,10 @@ Rational Rational:: operator +(const Rational&r1)
 
 	if (this->nom.getDegree(true) > r1.nom.getDegree(true))
 	{
-		temp.nom.setDegree(this->nom.getDegree(true) );
+		temp.nom.setDegree(this->nom.getDegree(true)*2 );
 	}
 	else {
-		temp.nom.setDegree(r1.nom.getDegree(true) );
+		temp.nom.setDegree(r1.nom.getDegree(true)*2 );
 	}
 
 	if (this->denom == r1.denom)
